@@ -1,10 +1,18 @@
 <?php
-
 // Premiere ligne
+
 //methode get
-echo "Bienvenue ". htmlspecialchars($_GET["fname"]) . '!';
+if(isset($_GET['fname'])){
+    $a = trim(strip_tags($_GET['fname']));
+    echo "Bienvenue ". $a . '!';
+}
 
 //methode post
-echo 'Bonjour ' . htmlspecialchars($_POST["name"]) . '!';
+if(isset($_POST['name'])) {
+    $name = trim(strip_tags($_POST['name']));
+    echo 'Bonjour ' . $name . '!';
+
+}
+
 
 
